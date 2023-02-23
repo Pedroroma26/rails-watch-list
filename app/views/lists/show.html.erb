@@ -1,0 +1,23 @@
+<h2><%= @list.name %></h2>
+
+<div>
+  <%= link_to "Add Movies", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+</div>
+
+<% @list.movies.each do |movie| %>
+  <div class="container">
+    <h3><%= movie.title %></h3>
+    <p><%= movie.overview %></p>
+    <p><%= movie.rating %></p>
+    <%= image_tag (movie.poster_url), alt: "Le Wagon", width: 200 %>
+    <% bookmark = Bookmark.find_by(movie_id: movie.id) %>
+    <%= bookmark.comment %>
+    <div>
+      <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    </div>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Back to the List", lists_path, class: "btn btn-primary" %>
+</div>
