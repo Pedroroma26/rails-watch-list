@@ -10,3 +10,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h2{
+  transform:translatex(735px) translatey(0px);
+ }
+
+ .card {
+  position:relative;
+    
+  left:0px;
+  justify-content: center;
+  margin-top: 10px
+ }
