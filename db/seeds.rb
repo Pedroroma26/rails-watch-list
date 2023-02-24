@@ -18,10 +18,4 @@ puts 'Movies destroyed'
 end
 
 List.destroy_all
-puts 'Lists destroyed'
-List.create!(name: 'List 1')
-puts 'Lists created 1'
-List.create!(name: 'List 2')
-puts 'Lists created 2'
-List.create!(name: 'List 3')
-puts 'Lists created 3'
+puts 'List destroyed'
