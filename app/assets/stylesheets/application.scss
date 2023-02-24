@@ -11,13 +11,14 @@
 @import "components/index";
 @import "pages/index";
 
-h2{
-  transform:translatex(735px) translatey(0px);
+.list{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
  }
 
  .card {
   position:relative;
-    
   left:0px;
   justify-content: center;
   margin-top: 10px
